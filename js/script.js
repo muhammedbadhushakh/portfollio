@@ -75,7 +75,7 @@ const projectData = {
     icon: '🌐',
     iconBg: 'rgba(139,92,246,0.1)',
     projects: [
-       {
+{
   icon: '🎮',
   title: 'FunHub — Gaming & Entertainment Website',
   desc: 'Interactive gaming and entertainment platform featuring fun mini-games, multiplayer challenges, leaderboards, rewards, and a modern responsive design for endless user engagement.',
@@ -84,7 +84,7 @@ const projectData = {
   link: 'https://funs-hub.web.app',
   github: 'https://github.com/muhammedbadhushakh/fun-hub'
 },
-      {
+{
   icon: '🐦',
   title: 'Flappy Bird — Fun Arcade Game',
   desc: 'Addictive arcade-style flying game with smooth controls, funny sound effects, obstacle challenges, score tracking, and colorful animations for an engaging gaming experience.',
@@ -93,7 +93,7 @@ const projectData = {
   link: 'https://funflappy.netlify.app',
   github: 'https://github.com/muhammedbadhushakh/faiiapy'
 },
-    {
+{
   icon: '🗺️',
   title: 'Treasure Hunt — Campus Adventure Game',
   desc: 'Interactive college treasure hunt website where players solve clues, unlock levels, and find hidden QR codes across the campus to progress through exciting challenges and team-based missions.',
@@ -138,6 +138,15 @@ const projectData = {
   link: 'https://luviaweb.netlify.app',
   github: 'https://github.com/muhammedbadhushakh/luvia-web'
 },
+{
+  icon: '🌐',
+  title: 'Personal Portfolio Website',
+  desc: 'Modern responsive portfolio website showcasing projects, certifications, technical skills, resume, and creative works with smooth animations and interactive UI design.',
+  stack: ['HTML5','CSS3','JavaScript','Firebase','Netlify'],
+  color: '#06b6d4',
+  link: 'https://muhammedbadhusha-k-h.netlify.app',
+  github: 'https://github.com/muhammedbadhushakh/portfollio'
+}
     ]
   },
   ai: {
