@@ -437,17 +437,44 @@ function closePage(e) {
 // ============================================================
 //   CONTACT FORM
 // ============================================================
+// ============================================================
+//   EMAILJS CONFIG — Replace these three values with yours
+//   from https://dashboard.emailjs.com
+// ============================================================
+const EMAILJS_PUBLIC_KEY  = '';   // e.g. 'abc123XYZ'
+const EMAILJS_SERVICE_ID  = '';   // e.g. 'service_xxxxxx'
+const EMAILJS_TEMPLATE_ID = '';  // e.g. 'template_xxxxxx'
+
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
 function handleSubmit(e) {
   e.preventDefault();
-  const form = document.getElementById('contactForm');
+  const form    = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
-  const btn = form.querySelector('button');
-  btn.innerHTML = '<span>Sending...</span>';
-  btn.disabled = true;
-  setTimeout(() => {
-    form.style.display = 'none';
-    success.style.display = 'block';
-  }, 1500);
+  const btn     = form.querySelector('button');
+
+  // Basic guard so the demo still works before keys are set
+  if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+    alert('⚠️ Please set your EmailJS keys in script.js before testing.');
+    return;
+  }
+
+  btn.innerHTML = '<span>Sending…</span>';
+  btn.disabled  = true;
+
+  emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+    .then(() => {
+      form.style.display    = 'none';
+      success.style.display = 'block';
+      form.reset();
+    })
+    .catch((err) => {
+      console.error('EmailJS error:', err);
+      btn.innerHTML = '<span>Send Message</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+      btn.disabled  = false;
+      alert('❌ Failed to send message. Please try again or email me directly at badub410@gmail.com');
+    });
 }
 
 // ============================================================

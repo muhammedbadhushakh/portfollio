@@ -9,6 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -737,16 +738,16 @@
         <div class="contact-icon">&#128231;</div>
         <div class="contact-item-text">
           <small>Email</small>
-          <span>badub410@gmail.com</span>
+          <span>badhub410@gmail.com</span>
         </div>
       </div>
-      <div class="contact-item">
+      <!-- <div class="contact-item">
         <div class="contact-icon">&#128241;</div>
         <div class="contact-item-text">
           <small>Phone</small>
-          <span>+91 9847295224</span>
+          <span>+91 9847xxxxxx</span>
         </div>
-      </div>
+      </div> -->
       <div class="contact-item">
         <div class="contact-icon">&#128205;</div>
         <div class="contact-item-text">
@@ -767,19 +768,19 @@
       <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
         <div class="form-group">
           <label>Your Name</label>
-          <input type="text" placeholder="John Doe" required>
+          <input type="text" name="name" placeholder="John Doe" required>
         </div>
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" placeholder="john@example.com" required>
+          <input type="email" name="email" placeholder="john@example.com" required>
         </div>
         <div class="form-group">
           <label>Subject</label>
-          <input type="text" placeholder="Project Collaboration">
+          <input type="text" name="title" placeholder="Project Collaboration">
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea placeholder="Tell me about your project..." required></textarea>
+          <textarea name="message" placeholder="Tell me about your project..." required></textarea>
         </div>
         <button type="submit" class="btn-submit">
           <span>Send Message</span>
@@ -842,4 +843,4 @@
 
 <script src="js/script.js"></script>
 </body>
-</html>       
+</html>
